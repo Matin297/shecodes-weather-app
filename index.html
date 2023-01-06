@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App</title>
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="text-center p-3">
+      <h1>Weather App</h1>
+    </header>
+    <main class="my-3">
+      <section class="container p-4 bg-light rounded">
+        <div class="row">
+          <div class="col col-8">
+            <form class="row mb-3" id="search-city-form">
+              <div class="col px-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="City"
+                  id="city-name"
+                  required
+                />
+              </div>
+              <button type="submit" class="col-auto btn btn-primary">
+                Search
+              </button>
+              <button
+                type="button"
+                id="current-weather"
+                class="col-auto btn btn-info ms-2"
+              >
+                Current
+              </button>
+            </form>
+            <div class="row">
+              <span class="fs-5 mb-0" id="current-time">Wednesday 15:58</span>
+              <span>Humidity: <span id="humidity">--</span>%</span>
+              <span>Wind: <span id="wind-speed">--</span>m/s</span>
+            </div>
+          </div>
+          <div class="col col-4 text-center">
+            <h2 id="city" class="text-capitalize">---</h2>
+            <h3>
+              <span class="temperature" id="current-temp">--</span>
+              <span>°</span>
+              <button class="btn btn-link fs-6 text p-0 degree">C</button>
+              <span class="fs-5 text">|</span>
+              <button class="btn btn-link fs-6 p-0 degree">F</button>
+            </h3>
+            <span id="condition">---</span>
+          </div>
+          <div class="row col col-12 text-center mt-5">
+            <div class="col forecast">
+              <div>🌥</div>
+              <div class="text-muted"><span class="temperature">14</span>°</div>
+              <div class="text-muted">Thu</div>
+            </div>
+            <div class="col forecast">
+              <div>🌥</div>
+              <div class="text-muted"><span class="temperature">14</span>°</div>
+              <div class="text-muted">Thu</div>
+            </div>
+            <div class="col forecast">
+              <div>🌥</div>
+              <div class="text-muted"><span class="temperature">14</span>°</div>
+              <div class="text-muted">Thu</div>
+            </div>
+            <div class="col forecast">
+              <div>🌥</div>
+              <div class="text-muted"><span class="temperature">14</span>°</div>
+              <div class="text-muted">Thu</div>
+            </div>
+            <div class="col forecast">
+              <div>🌥</div>
+              <div class="text-muted"><span class="temperature">14</span>°</div>
+              <div class="text-muted">Thu</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

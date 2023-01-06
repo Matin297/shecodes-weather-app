@@ -1,0 +1,7 @@
+.forecast div:first-child {
+  font-size: 80px;
+}
+
+.forecast div:not(:first-child) {
+  font-size: 14px;
+}
