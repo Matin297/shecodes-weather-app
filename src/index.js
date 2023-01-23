@@ -79,11 +79,17 @@ function displayCurrentDate() {
 }
 
 function displayWeather({ data }) {
+  console.log(data)
   displayCityName(data.name);
   displayCurrentTemp(data.main.temp);
   displayHumidity(data.main.humidity);
   displayCondition(data.weather[0].main);
+  displayCurrentIcon(data.weather[0].icon);
   displayWindSpeed(data.wind.speed);
+}
+
+function displayCurrentIcon(iconCode) {
+  document.getElementById("c-icon").setAttribute("src", getIcon(iconCode));
 }
 
 function displayCityName(city) {
@@ -122,4 +128,8 @@ function toFahrenheit(temp) {
 
 function toCelsius(temp) {
   return Math.round((temp - 32) * 0.5556);
+}
+
+function getIcon(code) {
+  return `http://openweathermap.org/img/wn/${code}@2x.png`;
 }
